@@ -1,0 +1,15 @@
+{
+  "name": "query_filter_dev",
+  "version": "1.0.0",
+  "description": "Query Filter Dev Dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ramesh Rasaiyan",
+  "license": "ISC",
+  "devDependencies": {
+    "breakpoint": "^0.1.6",
+    "singularitygs": "^1.8.0"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the Query Filter</title>
+    <link rel="stylesheet" href="css/screen.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!--Header-->
+        <div class="header">
+            <h1>Query Filter</h1>
+        </div>
+
+        <!--Content-->
+        <div class="content-wrapper">
+            <h2 class="content-heading">
+                Compare Function Demo
+            </h2>
+            <div class="query-filter-wrapper">
+                <div class="query-filter-left">
+                    <h3 class="query-filter-header">Search Items</h3>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Select a table</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td ondblclick="searchItems(event);" id="market">Market</td>
+                                </tr>
+                                <tr>
+                                    <td ondblclick="searchItems(event);" id="market_real">Market real</td>
+                                </tr>
+                                <tr>
+                                    <td ondblclick="searchItems(event);" id="origin">Origin</td>
+                                </tr>
+                                <tr>
+                                    <td ondblclick="searchItems(event);" id="destination">Destination</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="query-filter-right">
+                    <h3 class="query-filter-header">Query Filtering</h3>
+                    <form id="queryFilter">
+                        <div class="query-filter" id="query-filter">
+
+                        </div>
+                        <a onclick="bulkDelete()">Delete Selected</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+</html>
