@@ -102,9 +102,10 @@ body {
 /* line 42, ../sass/screen.scss */
 .query-filter-wrapper {
   padding: .5em;
+  overflow: hidden;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .query-filter-left {
   width: 23.40426%;
   float: left;
@@ -113,7 +114,7 @@ body {
   clear: none;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .query-filter-right {
   width: 74.46809%;
   float: right;
@@ -122,17 +123,14 @@ body {
   clear: none;
 }
 
-/* line 54, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .query-filter-header {
   padding: .5em .5em .5em 0;
   font-size: 1.1em;
   font-weight: 600;
 }
 
-/*****************
- * Table Styles
- ****************/
-/* line 64, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .table-container {
   display: inline-block;
   position: relative;
@@ -144,19 +142,19 @@ body {
   padding: .5em;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 .table {
   width: 100%;
   max-width: 100%;
 }
-/* line 79, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .table th {
   color: #337ab7;
   font-weight: 600;
   padding: 12px 8px;
   vertical-align: middle;
 }
-/* line 86, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .table td {
   padding: 12px 8px;
   vertical-align: middle;
@@ -164,16 +162,16 @@ body {
   border-top: 1px solid #ddd;
   cursor: pointer;
 }
-/* line 94, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .table tr:first-child > td {
   border-top: none;
 }
-/* line 98, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .table td:hover {
   background-color: #f5f5f5;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .query {
   position: relative;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -185,7 +183,7 @@ body {
   overflow: hidden;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .query.intent {
   position: relative;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
@@ -194,20 +192,20 @@ body {
   background: #fff;
   padding: .5em;
   margin-bottom: .4em;
-  margin-left: 3em;
+  margin-left: 5em;
 }
 
-/* line 125, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .query-border {
   border-left: 5px solid #23b7e5;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .query-border-or {
   border-left: 5px solid #606060;
 }
 
-/* line 133, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .btn {
   position: relative;
   background-color: #3fc0e8;
@@ -229,12 +227,12 @@ body {
   padding: 0 1em 0 1em;
   line-height: 42px;
 }
-/* line 147, ../sass/screen.scss */
-.btn:first-child {
+/* line 144, ../sass/screen.scss */
+.btn:nth-of-type(1) {
   margin-left: .3em;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .query-left {
   width: 6.38298%;
   float: left;
@@ -243,7 +241,7 @@ body {
   clear: none;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 .query-middle {
   width: 65.95745%;
   float: left;
@@ -252,21 +250,35 @@ body {
   clear: none;
 }
 
-/* line 160, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .query-right {
   width: 23.40426%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  padding-right: 70px;
 }
 
-/* line 164, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .right {
   float: right;
 }
 
-/* line 168, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
+.query > .query-left {
+  background-color: #d2d2d2;
+  background-image: linear-gradient(90deg, #e7e7e7 0%, #f0f0f0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 600;
+}
+
+/* line 178, ../sass/screen.scss */
 .query.intent > .query-left {
   background-color: #d2d2d2;
   background-image: linear-gradient(90deg, #e7e7e7 0%, #f0f0f0);
@@ -279,7 +291,7 @@ body {
   font-weight: 600;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .form-field {
   border: 1px solid #cccccc;
   font-size: 1em;
@@ -290,12 +302,73 @@ body {
   padding-left: .5em;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .form-field.form-small {
   width: 50px;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 205, ../sass/screen.scss */
 .form-field.form-medium {
   width: 100px;
+}
+
+/* line 209, ../sass/screen.scss */
+.checkbox_container {
+  position: absolute;
+  top: -8px;
+  bottom: -10px;
+  right: 0;
+  background-color: #e7e7e7;
+  width: 65px;
+  border-right: 5px solid #CCC;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+}
+/* line 221, ../sass/screen.scss */
+.checkbox_container:after {
+  font-family: 'Material Icons';
+  content: '\E836';
+  font-size: 2em;
+  font-weight: normal;
+  top: 6px;
+  position: relative;
+}
+
+/* line 231, ../sass/screen.scss */
+.checkbox_container.highlight {
+  border-right: 5px solid #ea2500;
+}
+/* line 233, ../sass/screen.scss */
+.checkbox_container.highlight:after {
+  font-family: 'Material Icons';
+  content: '\E876';
+  font-size: 2em;
+  font-weight: normal;
+  top: 6px;
+  position: relative;
+}
+
+/* line 243, ../sass/screen.scss */
+.multi-select {
+  display: none;
+}
+
+/* line 247, ../sass/screen.scss */
+#help {
+  display: none;
+  background-color: #eeeeee;
+  border-top: 5px solid #e3e3e3;
+  padding: .5em;
+}
+/* line 253, ../sass/screen.scss */
+#help p {
+  font-size: .900em;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+/* line 260, ../sass/screen.scss */
+#help.show {
+  display: block;
 }
