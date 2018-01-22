@@ -115,13 +115,15 @@ function removeElement(event, el) {
             if (deleteRow) {
                 for (var i = 0; i < selectedRows.length; i++) {
                     var el = document.getElementById(selectedRows[i].parentNode.parentNode.id);
-                    el.remove();
+                    // el.remove();
+                    el.parentNode.removeChild(el);
                 }
             }
         } else {
             var deleteRow = confirm('Are you sure? Do you want to delete this row?');
             if (deleteRow) {
-                el.remove();
+                // el.remove();
+                el.parentNode.removeChild(el);
             }
         }
     }
@@ -179,7 +181,8 @@ function bulkDelete() {
     var selectedRows = document.querySelectorAll('input[type=checkbox]:checked');
     for (var i = 0; i < selectedRows.length; i++) {
         var el = document.getElementById(selectedRows[i].parentNode.parentNode.id);
-        el.remove();
+        // el.remove();
+        el.parentNode.removeChild(el);
     }
     enableHelp();
 }
