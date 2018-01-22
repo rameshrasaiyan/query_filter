@@ -138,8 +138,12 @@ body {
   @include border-radius(3px);
   border: 1px solid #c6c6c6;
   height: 43px;
-  padding: 0 1em 0 1em;
+  padding: 0 .5em 0 .5em;
   line-height: 42px;
+
+  @include breakpoint(1270px) {
+    padding: 0 1em 0 1em;
+  }
 
   &:nth-of-type(1) {
     margin-left: .3em;
@@ -151,11 +155,11 @@ body {
 }
 
 .query-middle {
-  @include grid-span(8, 2)
+  @include grid-span(6, 2)
 }
 
 .query-right {
-  @include grid-span(3, 10);
+  @include grid-span(5, 8);
   padding-right: 70px;
 }
 
@@ -191,10 +195,14 @@ body {
   border: 1px solid #cccccc;
   font-size: 1em;
   font-weight: 300;
-  width: 150px;
+  width: 100px;
   height: 45px;
   box-sizing: border-box;
   padding-left: .5em;
+
+  @include breakpoint(1270px) {
+    width: 125px;
+  }
 }
 
 .form-field.form-small {
